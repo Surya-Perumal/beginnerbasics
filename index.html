@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namma Professor | All in one platform for college students</title>
+    <!-- Link to Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function() {
+  // Get all navigation links
+  var navLinks = document.querySelectorAll('.nav-link');
+  
+  // Loop through each link and add click event listener
+  navLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault(); // Prevent default behavior of link click
+      
+      var targetId = this.getAttribute('data-scroll-to'); // Get the target id from data attribute
+      
+      var targetElement = document.getElementById(targetId); // Get the target element
+      
+      if (targetElement) {
+        // Scroll to the target element
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+});
+    </script>
+    <!-- Custom CSS for font family -->
+    <style>
+        /* Font family Lato */
+        body, h1, h2, h3, h4, h5, h6, p, a, ul, li {
+            font-family: 'Lato', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="p-4">
+  <div class="container mx-auto flex justify-between items-center">
+
+    <div class="flex items-center">
+      <img src="assets/logo/nammaprofessor.png" alt="Namma Professor Logo" class="h-12 mr-2">
+      <a href="#" class="text-black text-2xl font-black">Namma Professor</a>
+    </div>
+
+    <button id="mobile-menu-toggle" class="md:hidden text-white">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+
+    <ul id="desktop-nav" class="hidden md:flex space-x-8">
+  <li><a href="#" class="nav-link text-black font-bold tracking-widest active" data-scroll-to="header">Home</a></li>
+  <li><a href="#" class="nav-link text-black font-bold tracking-widest active" data-scroll-to="events">Events</a></li>
+  <li><a href="#" class="nav-link text-black font-bold tracking-widest" data-scroll-to="feature">Feature</a></li>
+  <li><a href="#" class="nav-link text-black font-bold tracking-widest" data-scroll-to="about">About</a></li>
+  <li><a href="#" class="nav-link text-black font-bold tracking-widest" data-scroll-to="contact">Contact</a></li>
+</ul>
+    <div class="flex space-x-4">
+      <button class="cta">
+        <a href="auth/login.html" class="hover-underline-animation">Login</a>
+      </button>
+      <button class="cta">
+        <a href="auth/register.html" class="hover-underline-animation">Register</a>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div id="mobile-menu" class="md:hidden hidden bg-gray-800 p-4">
+  <ul class="flex flex-col space-y-4">
+    <li><a href="#" class="text-white">Home</a></li>
+    <li><a href="#" class="text-white">About</a></li>
+    <li><a href="#" class="text-white">Contact</a></li>
+  </ul>
+</div>
+
+
+    <!-- Hero Section -->
+    <section class="relative text-white py-40 flex items-center justify-center hero-image" style="background-image: url('assets/hero/poster.png'); background-size: contain; background-position: center;" id="header">
+    <div class="absolute left-0 top-0 bottom-0 w-4/5 bg-gradient-to-r from-black via-transparent to-transparent z-10"></div> <!-- Adjusted width to 3/4 -->
+    <div class="container mx-auto relative z-20 pl-12"> <!-- Added left padding -->
+        <h2 class="text-4xl font-bold mb-4">Welcome to Namma Professor</h2>
+        <p class="text-lg mb-8">Empowering students through online learning.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.protracon.nammaprofessor" target="_blank"><button class="animated-button">
+  <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+    ></path>
+  </svg>
+  <span class="text"> Download Now !</span>
+  <span class="circle"></span>
+  <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+    ></path>
+  </svg>
+</button></a>
+
+    </div>
+</section>
+
+
+
+    <!-- Content Section -->
+<div class="container mx-auto mt-8 px-4" id="data-container"> <!-- Added px-4 for horizontal padding -->
+    <h1 class="text-3xl font-bold text-center mb-4">Events</h1>
+   
+    <p class="text-lg text-gray-700 text-center">This is a sample responsive website with a navbar using HTML and Tailwind CSS.</p>
+
+    <!-- Cards Section -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+        
+        <!-- Card  -->
+        <div class="bg-white rounded-3xl p-6 flex flex-wrap items-center justify-between card">
+  <img src="assets/events/test.jpg" alt="Event 1" class="w-full h-auto mb-4 rounded-3xl" style="max-height:300px;max-width: auto; object-fit: fill;">
+  <div class="flex items-center justify-between w-full">
+    <h2 class="text-xl font-semibold mb-4 inline-block" style="max-height: 1.5rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"></h2><span class="category-bg px-4 py-1 rounded-lg mb-2 inline-block "></span> </div>
+  <p class="text-gray-700 event-overflow"></p>
+  <button class="learn-more">
+    <span class="circle" aria-hidden="true">
+      <span class="icon arrow"></span>
+    </span>
+    <a href="fullscrnevent.html"><span class="button-text">Learn More</span></a>
+  </button>
+</div>
+    </div>
+    <!-- View All Button -->
+    <div class="text-center mt-8">
+        <button class="viewall"> View more </button>
+
+    </div>
+</div>
+<br>
+
+    <!-------------------------------------------------------------------------------------------------------------
+    ----------------------------------------- Feature Chat Section -----------------------------------------------------
+    -------------------------------------------------------------------------------------------------------------->
+
+<div class="container mx-auto mt-8 px-4 relative chat-bg" id="feature"> <!-- Added relative positioning -->
+    <!-- Text and Paragraph at Center Left -->
+    <div class="flex justify-evenly items-center chat-section">
+    <div class=" pl-10"> <!-- Added left padding -->
+        <h2 class="text-4xl font-semibold mb-4">Chat with Namma Professor</h2> <!-- Added bottom margin -->
+        <div class="container" style="width:600px">
+            <p class="text-lg text-gray-700 mb-4">Unlock the wisdom of Namma Professor, right at your fingertips. Chat your way through learning with our dedicated mentor. Explore, question, and discover together. Your academic journey, powered by Namma Professor's expertise.</p>
+        </div>
+        
+        <button class="chat-button">
+  <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+    ></path>
+  </svg>
+  <span class="text"> Chat Now </span>
+  <span class="circle"></span>
+  <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+    ></path>
+  </svg>
+</button>
+
+    </div>
+    <!-- Mockup Mobile Image -->
+    <img src="assets/mockup/chat.png" alt="Mockup Mobile Image" class="mx-auto mt-8 mb-4  " style="height:90vh; width: auto;"> </div>
+    <div style="clear:both;"></div>
+</div>
+
+
+<!-------------------------------------------------------------------------------------------------------------
+    ----------------------------------------- Feature Event Section -----------------------------------------------------
+    -------------------------------------------------------------------------------------------------------------->
+
+<div class="container mx-auto  px-4 relative event-bg">
+    <!-- Text and Paragraph at Center Right -->
+    <div class="flex justify-evenly items-center event-section">
+        <!-- Mockup Mobile Image (moved to the left) -->
+        <img src="assets/mockup/explore-event.png" alt="Mockup Mobile Image" class="mx-auto mt-8 mb-4 max-w-full h-auto" style="height: 90vh; width: auto;">
+        <div class="pr-10 text-right"> <!-- Changed to right padding and text alignment -->
+            <h2 class="text-4xl font-semibold mb-4">Explore more and more</h2>
+            <div class="container" style="width:600px">
+            <p class="text-lg text-gray-700 mb-4">From cultural festivals to educational workshops, there's always something new to explore. Expand your horizons and connect with like-minded individuals.</p>
+        </div>
+            <button class="event-button">
+                <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                </svg>
+                <span class="text"> Chat Now </span>
+                <span class="circle"></span>
+                <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div style="clear:both;"></div>
+</div>
+
+<!-------------------------------------------------------------------------------------------------------------
+    ----------------------------------------- Feature Create Event Section -------------------------------------
+    -------------------------------------------------------------------------------------------------------------->
+
+<div class="container mx-auto mt-8 px-4 relative chat-bg"> <!-- Added relative positioning -->
+    <!-- Text and Paragraph at Center Left -->
+    <div class="flex justify-evenly items-center chat-section">
+    <div class=" pl-10"> <!-- Added left padding -->
+        <h2 class="text-4xl font-semibold mb-4">Submit your College Events</h2> <!-- Added bottom margin -->
+        <div class="container" style="width:600px">
+            <p class="text-lg text-gray-700 mb-4">Empower your campus community by showcasing your college events here. Share the buzz, gather the crowd, and make your mark on campus life. From club meetings to campus-wide celebrations, every event finds its platform. Submit your event and let the excitement begin.</p>
+        </div>
+        <button class="chat-button">
+  <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+    ></path>
+  </svg>
+  <span class="text"> Chat Now </span>
+  <span class="circle"></span>
+  <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+    ></path>
+  </svg>
+</button>
+
+    </div>
+    <!-- Mockup Mobile Image -->
+    <img src="assets/mockup/create-event.png" alt="Mockup Mobile Image" class="mx-auto mt-8 mb-4  " style="height:90vh; width: auto;"> </div>
+    <div style="clear:both;"></div>
+</div>
+
+
+<!-------------------------------------------------------------------------------------------------------------
+    ----------------------------------------- About Section -----------------------------------------------------
+    -------------------------------------------------------------------------------------------------------------->
+
+<div class="container text-center about mt-16 ">
+    <h3 class="text-4xl">About Namma Professor</h3>
+    <br>
+    <div class="container about" style="width:500px;margin: auto;width: 50%;">
+    <p>Namma Professor allows you to browse and discover a wide array of college events, from academic seminars to sports tournaments and cultural festivals. Want to contribute to the vibrant college community? You can also upload and promote events, ensuring that your fellow students are always in the loop.</p></div>
+</div>
+
+
+
+
+
+
+<!-------------------------------------------------------------------------------------------------------------
+    ----------------------------------------- Contact Section -----------------------------------------------------
+    -------------------------------------------------------------------------------------------------------------->
+
+
+
+    <!-------------------------------------------------------------------------------------------------------------
+    ----------------------------------------- Contact Section -----------------------------------------------------
+    -------------------------------------------------------------------------------------------------------------->
+
+<div class="container mx-auto mt-8 px-4 relative contact-bg mt-16" id="contact"> <!-- Added relative positioning -->
+    <!-- Text and Paragraph at Center Left -->
+    <div class="flex justify-evenly contact-section ">
+    <div class=" pl-10"> <!-- Added left padding -->
+        <h2 class="text-4xl font-bold mb-2">Contact Us</h2>
+            <p class="mb-8">Got questions or feedback? Reach out to us anytime! We're here to help. <br>Contact us via email or phone for prompt assistance</p>
+            <div class="contact-card">
+
+<!--- Email ------->            
+
+<div class="flex mb-4 space-x-4">
+<span class="material-symbols-rounded">
+mail
+</span>
+    <p class="contact-txt">nammaprofessor@gmail.com</p>
+</div>
+
+
+<!--- Mobile Number ------->
+
+<div class="flex mb-4 space-x-4">
+    <span class="material-symbols-rounded">
+call
+</span>
+    <p class="contact-txt">+91 0000 000 000</p>
+</div>
+
+
+<!--- Location ------->
+
+<div class="flex mb-4 space-x-4">
+   <span class="material-symbols-rounded">
+location_on
+</span>
+    <p class="contact-txt">Chennai</p>
+</div>
+</div>
+    </div>
+    <!-- Mockup Mobile Image -->
+    <form class="mx-auto mt-8 mb-4 max-w-full h-auto" id="contactForm">
+    <div class="flex">
+        <div class="mb-4">
+            <label for="first_name" class="block text-gray-700 font-bold mb-2">First Name <span class="text-red-500">*</span></label>
+            <input type="text" id="first_name" name="first_name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+        </div>
+        <div class="mb-4 px-8">
+            <label for="last_name" class="block text-gray-700 font-bold mb-2">Last Name <span class="text-red-500">*</span></label>
+            <input type="text" id="last_name" name="last_name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+        </div>
+    </div>
+    <div class="mb-4">
+        <label for="email" class="block text-gray-700 font-bold mb-2">Email <span class="text-red-500">*</span></label>
+        <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+    </div>
+    <div class="mb-4">
+        <label for="subject" class="block text-gray-700 font-bold mb-2">Subject </label>
+        <input type="text" id="subject" name="subject" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+    </div>
+    <div class="mb-4">
+        <label for="message" class="block text-gray-700 font-bold mb-2">Message </label>
+        <textarea id="message" name="message" rows="4" class="border w-full py-2 px-3 text-gray-700"></textarea>
+    </div>
+    <button type="submit" class="bg-blue-500 text-white font-bold py-2 px-4 rounded contact-btn">Submit</button>
+</form> </div>
+    <div style="clear:both;"></div>
+</div>
+
+
+
+ <!-- Footer -->
+<footer class="site-footer">
+    <h2 class="text-center footer-head">Namma Professor</h2>
+    <p class="text-center footer-subhead">All in one platform for college students</p>
+    <hr class="mb-8 divider">
+    <div class="container">
+        <div class="row flex justify-between footer-section">
+            <div class="col-md-4 px-8">
+                <h3 class="footer-title">Wanna Try !</h3>
+                <p class="footer-description mb-8">Download it only on Google Play</p>
+               <a href="https://play.google.com/store/apps/details?id=com.protracon.nammaprofessor" target="_blank"><button class="animated-button">
+                    <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                        ></path>
+                    </svg>
+                    <span class="text"> Download Now !</span>
+                    <span class="circle"></span>
+                    <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                        ></path>
+                    </svg>
+                </button></a>
+            </div>
+            <div class="col-md-4 items-center links-footer">
+                <h3 class="mb-4 font-bold">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#header" class=" text-black tracking-widest" data-scroll-to="header">Home</a></li>
+  <li><a href="#events" class="text-black tracking-widest" data-scroll-to="events">Events</a></li>
+  <li><a href="#feature" class="text-black tracking-widest" data-scroll-to="feature">Feature</a></li>
+  <li><a href="#" class="text-black tracking-widest" data-scroll-to="about">About</a></li>
+  <li><a href="#contact" class="text-black tracking-widest" data-scroll-to="contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 px-8 about-footer">
+                <h3 class="mb-4 font-bold">About Us</h3>
+                <div class="container" style="width:600px; text-align: justify;">
+                <p class="footer-description">Namma Professor allows you to browse and discover a wide array of college events, from academic seminars to sports tournaments and cultural festivals. Want to contribute to the vibrant college community? You can also upload and promote events, ensuring that your fellow students are always in the loop.</p>
+            </div>
+            </div>
+            <div class="col-md-4 px-8 social-footer">
+    <h3 class="mb-4 font-bold">Follow Us</h3>
+    <ul class="social-links list-none p-0">
+        <li class="inline-block mx-1">
+            <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full social-icon"><i class="fab fa-facebook-f"></i></a>
+        </li>
+        <li class="inline-block mx-1">
+            <a href="https://x.com/NammaProfessor?t=e0AMkDSsBM1BqRVlRdHd4g&s=35" class="flex items-center justify-center w-10 h-10 rounded-full social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li class="inline-block mx-1">
+            <a href="https://www.instagram.com/nammaprofessor?igsh=MXQweDQ1N294cTAyeg==" class="flex items-center justify-center w-10 h-10 rounded-full social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li class="inline-block mx-1">
+            <a href="https://www.linkedin.com/in/namma-professor" target="_blank" class="flex items-center justify-center w-10 h-10 rounded-full social-icon"><i class="fab fa-linkedin-in"></i></a>
+        </li>
+    </ul>
+</div>
+</div>
+        <br>
+        <div class="row">
+            <div class="col-md-12 text-right px-4 text-white">
+                <p>&copy; 2024 Namma Professor. All rights reserved. <a href="privacy-statement.html" style="text-decoration: underline;cursor: pointer;">Privacy Statement</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+    <!-- JavaScript to toggle mobile menu -->
+    <script>
+        document.getElementById('mobile-menu-toggle').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+  import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAT7DZjGW9L8sufkyZ857OYPDLQ7xDxzeU",
+    authDomain: "namma-professor-fb614.firebaseapp.com",
+    databaseURL: "https://namma-professor-fb614-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "namma-professor-fb614",
+    storageBucket: "namma-professor-fb614.appspot.com",
+    messagingSenderId: "455120126820",
+    appId: "1:455120126820:web:abf72fdbe52f73392bf071",
+    measurementId: "G-1GBCK234N9"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  const collectionRef = collection(db, "events-np");
+
+  async function getEventsData() {
+    try {
+      const querySnapshot = await getDocs(collectionRef);
+      const events = [];
+
+      querySnapshot.forEach((doc) => {
+        const data = doc.data();
+        events.push({
+          id: doc.id,
+          title: data.title,
+          aboutEvent: data.aboutEvent,
+          category: data.category,
+          imagePath:data.imagePath
+        });
+      });
+
+      return events;
+    } catch (error) {  // Handle potential errors during data fetching
+      console.error("Error fetching events:", error);
+      // Consider displaying a user-friendly error message or retrying
+    }
+  }
+
+  async function displayEvents(startIndex = 0, limit = 6) {
+  const events = await getEventsData();
+  const cardContainer = document.querySelector('.card'); // Select the card container by class
+
+  // Slice the events array to display the desired number of cards
+  const eventsToDisplay = events.slice(startIndex, startIndex + limit);
+
+  eventsToDisplay.forEach((event) => {
+    const cardClone = cardContainer.cloneNode(true); // Clone the card structure
+
+    // Update content based on event data
+    cardClone.querySelector('h2').textContent = event.title;
+    cardClone.querySelector('.category-bg').textContent = event.category;
+    cardClone.querySelector('p').textContent = event.aboutEvent;
+    cardClone.querySelector('img').src = event.imagePath;
+
+    // Remove the "" comment before appending
+    cardContainer.parentNode.insertBefore(cardClone, cardContainer); // Insert the cloned card
+  });
+
+  cardContainer.remove(); // Remove the original card (placeholder)
+
+  // Update the button visibility based on remaining events
+  const viewMoreButton = document.querySelector('.viewall');
+  viewMoreButton.disabled = events.length <= startIndex + limit;
+}
+
+let displayedEvents = 6; // Keep track of displayed events
+
+displayEvents(); // Call initial display with 6 cards
+
+const viewMoreButton = document.querySelector('.viewall');
+viewMoreButton.addEventListener('click', () => {
+  displayedEvents += 6; // Update displayed event counter
+  displayEvents(displayedEvents, 6); // Display next 6 cards
+});
+
+</script>
+
+
+
